@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLLoginController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="56.0" prefWidth="418.0" style="-fx-background-color: #8ed755;">
+         <children>
+            <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" text="LOGIN">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.5394737124443054" green="0.4770345985889435" blue="0.4770345985889435" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </HBox>
+      <VBox prefHeight="209.0" prefWidth="418.0" style="-fx-background-color: #c6e2b1;">
+         <children>
+            <VBox prefHeight="59.0" prefWidth="418.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname:">
+                     <VBox.margin>
+                        <Insets left="20.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Text>
+                  <HBox prefHeight="0.0" prefWidth="418.0">
+                     <children>
+                        <TextField promptText="insert your nickname">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.7372549176216125" green="0.7372549176216125" blue="0.7372549176216125" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="105.0" prefWidth="418.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="26.0" prefWidth="398.0">
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <PasswordField promptText="insert your password">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.7372549176216125" green="0.7372549176216125" blue="0.7372549176216125" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="400.0">
+                     <children>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #8ed755;" text="Login" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <effect>
+                              <InnerShadow>
+                                 <color>
+                                    <Color red="0.44736841320991516" green="0.4307992160320282" blue="0.4307992160320282" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/accept_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="95.0" prefWidth="400.0">
+               <children>
+                  <Hyperlink contentDisplay="RIGHT" text="¿New User? Click here to SIGN UP" underline="true">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Hyperlink>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

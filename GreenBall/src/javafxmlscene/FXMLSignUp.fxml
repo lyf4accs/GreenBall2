@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLSignUpController">
+   <children>
+      <BorderPane layoutX="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="447.0" prefWidth="635.0" style="-fx-background-color: #43317c;">
+         <top>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="63.0" prefWidth="429.0" style="-fx-background-color: #8b66ff; -fx-background-radius: 10; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 0.5;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" text="    SIGN UP" wrappingWidth="429.9090576171875">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="46.0" />
+                     </font>
+                  </Text>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="40.0" />
+               </BorderPane.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="138.0" prefWidth="635.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="98.0" prefWidth="301.0">
+                     <children>
+                        <Label focusTraversable="false" text="Personalize your profile!! (optional):" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #f3f6f4;" text="Add Photo" textFill="#868686">
+                           <VBox.margin>
+                              <Insets left="12.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="40.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="90.0" />
+                     </padding>
+                  </VBox>
+                  <Button fx:id="bAccept1" mnemonicParsing="false" onAction="#accepted" onKeyPressed="#acceptPulsado" prefHeight="20.0" prefWidth="86.0" style="-fx-background-color: #8b66ff;" text="Accept" textFill="WHITE">
+                     <graphic />
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="90.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="bAccept" mnemonicParsing="false" onAction="#accepted" onKeyPressed="#acceptPulsado" prefHeight="20.0" prefWidth="86.0" style="-fx-background-color: #8b66ff;" text="Accept" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="90.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/accept_white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="bCancel" mnemonicParsing="false" onAction="#cancelled" style="-fx-background-color: #999999;" text="Cancel" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="90.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/cancel_white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="133.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="61.0" prefWidth="635.0">
+                     <children>
+                        <VBox prefHeight="50.0" prefWidth="456.0">
+                           <children>
+                              <Label focusTraversable="false" text="Lastname:" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="eemail" maxWidth="-Infinity" onKeyPressed="#emailNext" prefHeight="26.0" prefWidth="346.0" promptText="insert your lastname/s">
+                                 <VBox.margin>
+                                    <Insets left="35.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow height="22.48" radius="11.844999999999999" width="26.9">
+                                       <color>
+                                          <Color red="0.6974999904632568" green="0.7211250066757202" blue="0.75" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="70.0" right="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Label fx:id="lIncorrectEmail" textFill="#f1ffba">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <VBox layoutX="100.0" layoutY="10.0" prefHeight="53.0" prefWidth="450.0">
+                           <children>
+                              <Label focusTraversable="false" text="Name:" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="eemail1" maxWidth="-Infinity" onKeyPressed="#emailNext" prefHeight="26.0" prefWidth="203.0" promptText="insert your name">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow height="22.48" radius="11.844999999999999" width="26.9">
+                                       <color>
+                                          <Color red="0.6974999904632568" green="0.7211250066757202" blue="0.75" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets right="70.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="58.0" prefWidth="554.0">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="211.0">
+                           <children>
+                              <Label focusTraversable="false" text="Password:" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <StackPane prefHeight="26.0" prefWidth="159.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <PasswordField fx:id="psswd" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#psswdNext" prefHeight="26.0" prefWidth="198.0" promptText="LettersNumbersSymbols">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="0.6980392336845398" green="0.7215686440467834" blue="0.7490196228027344" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <StackPane.margin>
+                                          <Insets left="12.0" />
+                                       </StackPane.margin>
+                                    </PasswordField>
+                                    <Label fx:id="labelPsswd" prefHeight="15.0" prefWidth="174.0" style="-fx-background-color: WHITE;" visible="false" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <ToggleButton fx:id="button1" focusTraversable="false" mnemonicParsing="false" onMousePressed="#visualizePsswd" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: TRANSPARENT;">
+                           <graphic>
+                              <StackPane prefHeight="17.0" prefWidth="42.0">
+                                 <children>
+                                    <ImageView fx:id="whiteEye1" fitHeight="13.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/eye.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </ImageView>
+                                    <ImageView fx:id="blackEye1" fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../icons/eyeblack.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="0.2638888955116272" green="0.6810185313224792" blue="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="26.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <Label fx:id="lInvalidPsswd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="219.0" textFill="#f1ffba" wrapText="true">
+                           <HBox.margin>
+                              <Insets right="10.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="90.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="61.0" prefWidth="545.0">
+                     <children>
+                        <VBox prefHeight="58.0" prefWidth="215.0">
+                           <children>
+                              <Label focusTraversable="false" text="Nickname:" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField prefHeight="26.0" prefWidth="234.0" promptText="no spaces allowed">
+                                 <VBox.margin>
+                                    <Insets left="13.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.6980392336845398" green="0.7215686440467834" blue="0.7490196228027344" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Label fx:id="lInvalidPsswd2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="204.0" textFill="#f1ffba" wrapText="true">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="90.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="100.0" layoutY="129.0" prefHeight="61.0" prefWidth="545.0">
+                     <children>
+                        <VBox prefHeight="58.0" prefWidth="579.0">
+                           <children>
+                              <Label focusTraversable="false" text="Card Number:" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField prefHeight="26.0" prefWidth="206.0" promptText="insert password (more than 6 characters)">
+                                 <VBox.margin>
+                                    <Insets left="13.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.6980392336845398" green="0.7215686440467834" blue="0.7490196228027344" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="90.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </VBox>
+                        <Label fx:id="lIncorrectPsswd1" prefHeight="17.0" prefWidth="109.0" textFill="#f1ffba">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox prefHeight="58.0" prefWidth="274.0">
+                           <children>
+                              <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="88.0">
+                                 <children>
+                                    <Label focusTraversable="false" text="Card Password:" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <StackPane prefHeight="26.0" prefWidth="159.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <PasswordField fx:id="psswd1" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#psswdNext" prefHeight="26.0" prefWidth="69.0" promptText="SVC">
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color red="0.6980392336845398" green="0.7215686440467834" blue="0.7490196228027344" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </PasswordField>
+                                          <Label fx:id="labelPsswd1" prefHeight="15.0" prefWidth="174.0" style="-fx-background-color: WHITE;" visible="false" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                              <ToggleButton fx:id="button11" focusTraversable="false" mnemonicParsing="false" onMousePressed="#visualizePsswd" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: TRANSPARENT;">
+                                 <graphic>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fx:id="whiteEye11" fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/eye.png" />
+                                             </image>
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </ImageView>
+                                          <ImageView fx:id="blackEye11" fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                             <image>
+                                                <Image url="@../icons/eyeblack.png" />
+                                             </image>
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color red="0.2638888955116272" green="0.6810185313224792" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </ImageView>
+                                       </children>
+                                    </StackPane>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets top="26.0" />
+                                 </HBox.margin>
+                              </ToggleButton>
+                              <Label fx:id="lInvalidPsswd1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="105.0" textFill="#f1ffba" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
